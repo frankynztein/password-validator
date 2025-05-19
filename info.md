@@ -25,9 +25,9 @@ Un mensaje final de éxito si la contraseña es válida.
 - Shadcn UI
 - Tailwind
 
-refactorización:
+Primera refactorización:
 
-Te guío en cómo podrías refactorizar el componente para hacerlo más limpio y mantenible. Aquí hay varias sugerencias:
+
 1- Separar la lógica de validación:
 Crear un objeto con las reglas de validación
 Cada regla podría ser una función que retorna un objeto con el mensaje y el estado
@@ -51,3 +51,9 @@ Usar los componentes de shadcn/ui que ya tienes importados
 Mejorar la accesibilidad con labels y aria-labels apropiados
 
 La idea principal es que el código quede más declarativo y menos imperativo, lo que lo hará más fácil de mantener y entender.
+
+- Segundo refactor:
+
+Primero, modificar el estado inicial para que siempre muestre los mensajes de error
+Luego, actualizar la validación para que sea en tiempo real
+Finalmente, agregar el mensaje de éxito final

@@ -1,4 +1,3 @@
-import { Button } from './ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { PasswordInput } from './PasswordInput';
 import { ValidationResult } from './ValidationResult';
@@ -19,19 +18,9 @@ export const ValidationForm = ({
           value={passwordState.value}
           onChange={onPasswordChange}
         />
-        <Button 
-          type="submit"
-          className={`w-full ${
-            isValid 
-              ? 'bg-green-500 hover:bg-green-600' 
-              : 'bg-blue-500 hover:bg-blue-600'
-          }`}
-          aria-label="Validar contraseña"
-        >
-          Validar
-        </Button>
         <ValidationResult 
           results={passwordState.validationResults}
+          isValid={isValid}
           aria-live="polite"
           aria-atomic="true"
         />
